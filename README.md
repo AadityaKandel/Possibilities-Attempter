@@ -10,7 +10,9 @@ Eg: 100+400+500+600+700+800+900+1000+500-200-300
 
 Step 2:
 Provide these numbers one by one to the program or simply provide it as a list
+
 As a list: 100,400,500,600,700,800,900,1000,500,200,300
+
 One by one: 100 [Press Enter] 200 [Press Enter] and do it until the last one
 
 Step 3:

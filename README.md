@@ -6,14 +6,14 @@ It works exactly how its named! Open your calculator app, add and subtract diffe
 
 Step 1:
 Use your calculator and add and subtract few numbers
-Eg: 100+400+500+600+700+800+900+1000+500-200-300
+Eg: 100+400+500+600+700+800+900+1000+200+300-500
 
 Step 2:
 Provide these numbers one by one to the program or simply provide it as a list
 
-As a list: 100,400,500,600,700,800,900,1000,500,200,300
+As a list: 100,400,500,600,700,800,900,1000,200,300,500
 
-One by one: 100 [Press Enter] 200 [Press Enter] and do it until the last one
+One by one: 100 [Press Enter] 400 [Press Enter] and do it until the last one
 
 Step 3:
 After that, Press X to goto the next step.
@@ -22,4 +22,4 @@ In my case, its 5000
 [Press Enter]
 
 It will attempt every possibility and tries to find your answer
-After that, it'll provide you the equation: 100+400+500+600+700+800+900+1000+500-200-300
+After that, it'll provide you the equation: 100+400+500+600+700+800+900+1000+200+300-500

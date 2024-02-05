@@ -23,3 +23,8 @@ In my case, its 5000
 
 It will attempt every possibility and tries to find your answer
 After that, it'll provide you the equation: 100+400+500+600+700+800+900+1000+200+300-500
+
+----------------------------------------------------------------------------------------------
+Update: It doesn't let you input wrong numbers because it can now detect how many possibilities
+can be attempted and if the equation doesn't even come after trying all the possibilities, it'll
+throw it as an input error.

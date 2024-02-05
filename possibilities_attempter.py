@@ -18,6 +18,7 @@ list_gatherer = []
 int_gatherer = ""
 
 list_within_list = [] # This will have the list of random_index appended inside itself
+total_possibilities=0
 
 # Defining Functions
 def w(text):
@@ -120,53 +121,59 @@ while (True):
     pass
 clear()
 
+total_possibilities = 2**(len(all_values)-1)
+
 # Increase or decrease = all_values
 # Total = total
 
 while (True):
-  random_index = []
-  if random_index in list_within_list:
-    initialize()
-    continue #Repeat the loop
-  else:
-    pass
-  for i in range(len(all_values)):
-    random_index.append(random.randint(0,1))
-
-  list_within_list.append(random_index)
-
-  for i in range(len(random_index)):
-    if random_index[i] == 1:
-      increment.append(all_values[i])
-    elif random_index[i] == 0:
-      decrement.append(all_values[i])
-
-  total_increment = sum(increment)
-  total_decrement = sum(decrement)
-
-
-  answer = total_increment-total_decrement
-
-  if answer == total:
-    print(f"\n\nIncrement = {increment}")
-    print(f"Decrement = {decrement}")
-    print(f"Total: {total}")
-    show_equation()
+  if possibilities > total_possibilities:
+    print(f"\n\nWrong Input Given! There Cannot Be More Than {possibilities} Possibilities")
     break
-
-  elif sum(all_values) == total: # This is for anti-theft
-  	increment = []
-  	for x in all_values:
-  		increment.append(x)
-  	decrement = []
-  	print("\nDecrement doesn't exist")
-  	break
-
   else:
-    initialize()
-    print(f"Possibilities Attempted = {possibilities}")
+    random_index = []
+    if random_index in list_within_list:
+      initialize()
+      continue #Repeat the loop
+    else:
+      pass
+    for i in range(len(all_values)):
+      random_index.append(random.randint(0,1))
 
-  possibilities+=1
+    list_within_list.append(random_index)
+
+    for i in range(len(random_index)):
+      if random_index[i] == 1:
+        increment.append(all_values[i])
+      elif random_index[i] == 0:
+        decrement.append(all_values[i])
+
+    total_increment = sum(increment)
+    total_decrement = sum(decrement)
+
+
+    answer = total_increment-total_decrement
+
+    if answer == total:
+      print(f"\n\nIncrement = {increment}")
+      print(f"Decrement = {decrement}")
+      print(f"Total: {total}")
+      show_equation()
+      break
+
+    elif sum(all_values) == total: # This is for anti-theft
+    	increment = []
+    	for x in all_values:
+    		increment.append(x)
+    	decrement = []
+    	print("\nDecrement doesn't exist")
+    	break
+
+    else:
+      initialize()
+      print(f"Possibilities Attempted = {possibilities}")
+
+    possibilities+=1
 
 print('\n')
 os.system("pause")
